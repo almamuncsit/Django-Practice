@@ -1,0 +1,27 @@
+{% extends 'master.html' %}
+
+{% block title %} Login Form {% endblock %}
+
+{% block body %}
+
+    {% comment %}
+        This is comment
+        so don't worry
+    {% endcomment %}
+
+    {% filter force_escape|lower %}
+        This text will be HTML-escaped, and will appear in all lowercase.
+    {% endfilter %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <br/>
+        <input type="submit" value="login">
+
+
+    </form>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'master.html' %}
+
+{% block title %} Hello word {% endblock %}
+
+
+
+{% block body %}
+
+    <div class="container">
+        <div class="col-md-8 col-md-offset-2">
+            <h3> {{ last_video.title }} </h3>
+
+            <div>
+                {{ last_video.embed_code|safe }}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
